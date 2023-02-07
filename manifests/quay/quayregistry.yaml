@@ -1,0 +1,11 @@
+apiVersion: quay.redhat.com/v1
+kind: QuayRegistry
+metadata:
+  name: registry
+spec:
+  components:
+    - kind: objectstorage
+      managed: true
+    - kind: tls
+      managed: true
+  configBundleSecret: init-config-bundle-secret
